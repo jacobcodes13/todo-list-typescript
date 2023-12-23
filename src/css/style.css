@@ -18,7 +18,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: #333;
+  background-color: #297fa1b7;
   color: #fff;
   padding: 1rem;
   display: flex;
@@ -32,7 +32,7 @@ main {
 
   margin: auto;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 section {
@@ -44,8 +44,8 @@ section {
 .button {
   border-radius: 10px;
 
-  min-width: 48px;
-  min-height: 48px;
+  min-width: 35px;
+  min-height: 35px;
 }
 
 .button:hover {
@@ -127,8 +127,8 @@ section {
 
 .item > input[type="checkbox"] {
   text-align: center;
-  min-width: 2.5rem;
-  min-height: 2.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
   cursor: pointer;
 }
 
@@ -144,13 +144,4 @@ section {
 .item > button:hover, 
 .item > button:focus {
   color: red;
-}
-
-@media (min-width: 768px) {
-  section {
-      padding: 1rem;
-  }
-  .newItemEntry__form {
-      gap: 0.5rem;
-  }
 }
