@@ -6,6 +6,7 @@ interface List {
   save(): void,
   clearList(): void,
   addItem(itemObj: ListItem): void,
+  clearInput(): void,
   removeItem(id: string): void
 }
 
@@ -45,8 +46,18 @@ export default class FullList implements List {
 
   // addItem takes in a itemObj thats called ListItem
   addItem(itemObj: ListItem): void {
-    this._list.push(itemObj)
-    this.save()
+    this._list.push(itemObj);
+    this.save();
+
+    // Clear the input after adding the item
+    this.clearInput();
+  }
+
+  clearInput(): void {
+    const inputElement = document.getElementById('newItem') as HTMLInputElement;
+    if (inputElement) {
+      inputElement.value = '';
+    }
   }
 
   // removeItem takes in an id and removes the item with the id we selected
